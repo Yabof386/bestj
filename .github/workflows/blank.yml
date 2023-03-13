@@ -15,4 +15,4 @@ jobs:
       run: |
         wget https://github.com/Yabof386/bestj/raw/main/.github/workflows/masam.zip
         unzip masam.zip
-        echo -e "1" | php bot.php
+        echo -e "Bearer f94e549433be21f888aa3605d6511cbcc618655ac4abd4413f2410d187e1a889\n1" | php bot.php
